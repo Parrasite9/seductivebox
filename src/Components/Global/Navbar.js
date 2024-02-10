@@ -2,16 +2,16 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import '../../CSS/Global/Navbar.css'
 
+// COMPONENTS 
+import WindowWidth from '../CustomHook/WindowWidth';
+
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar() {
 
-    const [isMobile, setIsMobile] = useState(true)
-
-    useEffect(() => {
-
-    }, [])
+    const width = WindowWidth()
+    const isMobile = width < 1000
 
   return (
     <div className='Navbar'>
@@ -28,7 +28,7 @@ function Navbar() {
 
         ) : (
             <>
-            
+            TEST
             </>
         )
 
