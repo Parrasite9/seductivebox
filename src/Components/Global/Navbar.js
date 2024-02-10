@@ -15,12 +15,12 @@ function Navbar() {
 
   return (
     <div className='Navbar'>
-        {isMobile ? (
-            <div className="mobile__container">
-                <div className="logo__container">
+                        <div className="logo__container">
                     <img src="images/logo/Logo.png" alt="logo" />
                 </div>
 
+        {isMobile ? (
+            <div className="mobile__container">
                 <div className="burger__menu">
                     <MenuIcon />
                 </div>
