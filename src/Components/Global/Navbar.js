@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import '../../CSS/Global/Navbar.css'
 
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
