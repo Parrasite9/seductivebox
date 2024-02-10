@@ -1,6 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 
+// MUI ICONS 
+import MenuIcon from '@mui/icons-material/Menu';
+
 function Navbar() {
 
     const [isMobile, setIsMobile] = useState(true)
@@ -18,7 +21,7 @@ function Navbar() {
                 </div>
 
                 <div className="burger__menu">
-
+                    <MenuIcon />
                 </div>
             </div>
 
