@@ -27,3 +27,17 @@
 .step__info > p {
     padding-bottom: 5%;
 }
+
+@media (min-width: 750px) {
+    .STEP > h2 {
+        font-size: 28px;
+    }
+
+    .step__info > h1 {
+        font-size: 32px;
+    }
+
+    .step__info > h6 {
+        font-size: 24px;
+    }
+}
