@@ -3,7 +3,7 @@ import '../../CSS/Home/Box.css'
 
 function Box() {
   return (
-    <div className='BOX'>
+    <div className='Box'>
       <h1>WHAT'S IN THE SEDUCTIVEBOX?</h1>
       <p>Styles hand picked just for you, based on your unique preferences!</p>
 
@@ -39,6 +39,8 @@ function Box() {
         </div>
 
       </div>
+
+      <button>Take Style Quiz</button>
     </div>
   )
 }

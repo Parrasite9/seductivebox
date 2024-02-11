@@ -1,3 +1,7 @@
+.Box {
+    text-align: center;
+}
+
 .item__container > img {
     width: 100%;
 }
@@ -19,3 +23,18 @@
 /* Bottom row, center-aligned adjustments */
 .item__container:nth-child(4) { grid-area: 2 / 2 / 3 / 4; } /* 1st image on bottom row, centered, spans columns 2-3 */
 .item__container:nth-child(5) { grid-area: 2 / 4 / 3 / 6; } /* 2nd image on bottom row, centered, spans columns 4-5 */
+
+.Box > button {
+    width: 43%;
+    height: 50px;
+    border: solid 3px #a100ff;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #ff00c3;
+}
+
+.Box > button:hover {
+    background-color: #a100ff;
+    color: #f2f2f2;
+}
+
