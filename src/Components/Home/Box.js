@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../CSS/Home/Box.css'
 
 function Box() {
   return (
@@ -9,29 +10,34 @@ function Box() {
       <div className="box__container">
         {/* INDIVIDUAL ITEM  */}
         <div className="item__container">
-          <img src='images/box/.png' alt='product-img' />
+          <img src='images/product/garter.png' alt='product-img' />
+          <p>Gartered Lingerie</p>
         </div>
-        
+
         {/* INDIVIDUAL ITEM  */}
         <div className="item__container">
-          <img src='images/box/.png' alt='product-img' />
+          <img src='images/product/teddy.png' alt='teddy' />
+          <p>Teddys</p>
         </div>
-        
+
         {/* INDIVIDUAL ITEM  */}
         <div className="item__container">
-          <img src='images/box/.png' alt='product-img' />
+          <img src='images/product/bodysuit.png' alt='bodysuit' />
+          <p>Bodysuits</p>
         </div>
-        
+
         {/* INDIVIDUAL ITEM  */}
         <div className="item__container">
-          <img src='images/box/.png' alt='product-img' />
+          <img src='images/product/babydoll.png' alt='babydoll' />
+          <p>Babydoll's</p>
         </div>
-        
+
         {/* INDIVIDUAL ITEM  */}
         <div className="item__container">
-          <img src='images/box/.png' alt='product-img' />
+          <img src='images/product/pantyset.png' alt='pantyset' />
+          <p>Bra & Panty Sets</p>
         </div>
-        
+
       </div>
     </div>
   )
