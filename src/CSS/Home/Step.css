@@ -1,0 +1,29 @@
+.STEP > h2 {
+    text-align: center;
+    color: #ff00c3;
+}
+.step__info {
+    padding: 0 5%;
+    text-align: center;
+}
+.step__info > img {
+    width: 100%;
+    height: auto;
+}
+
+.step__info > h1 {
+    color: #a100ff;
+}
+
+.step__info > h1 > span {
+    color: #ff00c3;
+}
+
+.step__info > h6 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.step__info > p {
+    padding-bottom: 5%;
+}
