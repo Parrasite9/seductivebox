@@ -1,0 +1,35 @@
+.mobile__anchor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 10px; /* Adjust gap as needed */
+    justify-items: center;
+    padding: 0 5%;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta, .quote {
+    grid-column: 1 / -1; /* Span across both columns */
+  }
+  
+  .anchor__img__container {
+    display: contents; /* Use display: contents to have .anchor__img use the grid of .mobile__anchor */
+  }
+  
+  .anchor__img {
+    grid-column: span 1; /* Each .anchor__img takes up 1 column */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .anchor__img > img {
+    width: 100%;
+  }
+
+
+  
