@@ -8,3 +8,17 @@
 .logo__container > img {
     width: 50%;
 }
+
+.mobile__container > div > svg {
+    color: #a100ff;
+}
+
+@media (min-width: 750px) {
+    .hero__text > h1 {
+        font-size: 40px;
+    }
+
+    .mobile__container > div > svg {
+        font-size: 32px;
+    }
+}

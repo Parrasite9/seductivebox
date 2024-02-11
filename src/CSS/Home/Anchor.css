@@ -1,3 +1,6 @@
+.Anchor {
+    padding: 5% 0;
+}
 .mobile__anchor {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
@@ -5,7 +8,7 @@
     justify-items: center;
   }
 
-  .cta {
+  .cta, .quote {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +17,19 @@
     color: #f2f2f2;
     width: 100%;
     height: 160px;
+  }
+
+  .quote {
+    padding: 5% 0;
+  }
+
+  .quote > h2 {
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  .quote2 {
+    padding: 15% 0;
   }
 
   .cta > button {

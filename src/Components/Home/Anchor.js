@@ -11,7 +11,7 @@ function Anchor() {
   return (
     <div className='Anchor'>
       <div className="anchor__container">
-        
+
         {isMobile ? (
           <div className="mobile__anchor">
             <div className="cta">
@@ -38,7 +38,7 @@ function Anchor() {
               <img src="images/anchor/pantyset.png" alt="panty-set" />
             </div>
 
-            <div className="quote">
+            <div className="quote quote2">
               <h2>"My wife and I absolute LOVE our SeductiveBox subscription! This bring more excitement to our love life. Plus this is the only subscription that gets unwrapped TWICE!"</h2>
               <p>-Wendy S.</p>
             </div>
