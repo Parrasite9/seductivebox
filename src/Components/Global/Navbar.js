@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div className='Navbar'>
         <div className="logo__container">
-            <img src="images/logo/Logo.png" alt="logo" />
+            <img src="images/logo/LogoHD.png" alt="logo" />
         </div>
 
         {isMobile ? (

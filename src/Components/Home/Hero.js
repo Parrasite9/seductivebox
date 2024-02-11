@@ -44,7 +44,7 @@ function Hero() {
 
       {/* IMAGE  */}
       <div className="hero__img">
-        <img src='images/hero/1.png' alt='hero-img' />
+        <img src='images/hero/hero.png' alt='hero-img' />
       </div>
     </div>
   )

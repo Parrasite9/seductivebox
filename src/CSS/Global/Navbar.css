@@ -4,3 +4,7 @@
     align-items: center;
     padding: 2% 5%;
 }
+
+.logo__container > img {
+    width: 50%;
+}
