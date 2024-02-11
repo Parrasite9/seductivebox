@@ -1,0 +1,21 @@
+.Footer {
+    padding: 0 5%;
+    text-align: center;
+}
+
+.footer__logo > img {
+    width: 100%;
+}
+
+.footer__container > div > h2 {
+    background: -webkit-linear-gradient(36deg, #a100ff 0%, #ff00c3 62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-WebKit browsers */
+}
+
+.footer__container > div > a {
+    text-decoration: none;
+    color: #333;
+}
