@@ -1,6 +1,21 @@
+.faq__img,
+.q__and__a {
+    padding: 0 5%;
+}
 .faq__header {
     text-align: center;
     background-image: linear-gradient(36deg, #a100ff 0%, #ff00c3 62%);
     color: #f2f2f2;
 }
 
+.faq__img > img {
+    width: 100%;
+}
+
+.q__and__a h3 {
+    background: -webkit-linear-gradient(36deg, #a100ff 0%, #ff00c3 62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-WebKit browsers */
+}

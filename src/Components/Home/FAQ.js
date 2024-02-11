@@ -8,7 +8,7 @@ function FAQ() {
       </div>
 
       <div className="faq__img">
-        <img src="" alt="" />
+        <img src="images/faq/faq.jpg" alt="model" />
       </div>
       
       {/* Q and A */}
