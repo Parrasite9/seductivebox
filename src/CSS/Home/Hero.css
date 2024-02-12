@@ -64,3 +64,15 @@
             display: flex;
         }
 }
+
+@media (min-width: 1000px) {
+    .hero__text__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero__text > button {
+        font-size: 16px;
+    }
+}
