@@ -39,6 +39,12 @@
     color: #ff00c3;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
+}
+
+.hero__text > button:hover {
+    background-color: #a100ff;
+    color: white;
 }
 
 .hero__img > img {
@@ -74,5 +80,19 @@
 
     .hero__text > button {
         font-size: 16px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .hero__text__container {
+        justify-content: center;
+    }
+
+    .hero__text > h1 {
+        font-size: 40px;
+    }
+
+    .hero__text > h4 {
+        font-size: 20px;
     }
 }

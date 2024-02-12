@@ -31,6 +31,7 @@
     border-radius: 20px;
     font-size: 16px;
     color: #ff00c3;
+    cursor: pointer;
 }
 
 .Box > button:hover {
