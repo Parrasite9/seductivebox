@@ -122,7 +122,7 @@ function Anchor() {
               <img src="images/anchor/model3.png" alt="model3" />
             </div>
 
-            <div className="desktop__quote">
+            <div className="desktop__quote large__quote">
               <h2>"My wife and I absolute LOVE our SeductiveBox subscription! This bring more excitement to our love life. Plus this is the only subscription that gets unwrapped TWICE!"</h2>
               <p>-Wendy S.</p>
             </div>

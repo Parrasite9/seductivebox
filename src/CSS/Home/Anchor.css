@@ -144,7 +144,7 @@
         width: 70%;
     }
 
-    div:nth-child(9) > h2 {
+    .large__quote > h2 {
         font-size: 18px;
         padding-bottom: 5%;
     }
