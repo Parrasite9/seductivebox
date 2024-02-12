@@ -6,6 +6,7 @@
     padding: 0 5%;
     text-align: center;
 }
+
 .step__info > img {
     width: 100%;
     height: auto;
@@ -32,12 +33,29 @@
     .STEP > h2 {
         font-size: 28px;
     }
+    .step__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 2 / 1 / 3 / 2; }
+        .div4 { grid-area: 2 / 2 / 3 / 3; }
+        .div5 { grid-area: 3 / 1 / 4 / 2; }
+        .div6 { grid-area: 3 / 2 / 4 / 3; }
 
-    .step__info > h1 {
-        font-size: 32px;
-    }
+        .step__info > img {
+            height: auto;
+        }
 
-    .step__info > h6 {
-        font-size: 24px;
-    }
+        .step__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
 }
