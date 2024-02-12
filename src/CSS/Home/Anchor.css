@@ -34,7 +34,8 @@
   }
 
   .cta > button,
-  .tablet__cta > button {
+  .tablet__cta > button,
+  .desktop__cta > button {
     color: #ff00c3;
     background-color: #fff;
     border: 2px solid #a100ff;
@@ -82,12 +83,13 @@
     .tablet__img__container {
         display: flex;
     }
-    
+
     .tablet__img__container > img {
         width: 100%;
     }
 
-    .quote__container {
+    .quote__container,
+    .desktop__quote {
         background-color: #2b5eaf;
         color: #f2f2f2;
         display: flex;
@@ -96,14 +98,73 @@
         padding: 0 5%;
     }
 
-    .tablet__cta {
+    .tablet__cta,
+    .desktop__cta {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .tablet__cta > button {
+    .tablet__cta > button,
+    .desktop__cta > button {
         height: 10%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .desktop__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding: 0 5%;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 1 / 3 / 2 / 4; }
+        .div4 { grid-area: 2 / 1 / 3 / 2; }
+        .div5 { grid-area: 2 / 2 / 3 / 3; }
+        .div6 { grid-area: 2 / 3 / 3 / 4; }
+        .div7 { grid-area: 3 / 1 / 4 / 2; }
+        .div8 { grid-area: 3 / 2 / 4 / 3; }
+        .div9 { grid-area: 3 / 3 / 4 / 4; }
+
+    .desktop__img > img {
+        width: 100%;
+    }
+
+    .desktop__cta > h2 {
+        text-align: center;
+    }
+
+    .desktop__cta > button {
+        width: 70%;
+    }
+
+    div:nth-child(9) > h2 {
+        font-size: 18px;
+        padding-bottom: 5%;
+    }
+    
+    .desktop__quote, .desktop__img, .desktop__cta {
+        box-sizing: border-box;
+    }
+
+    .desktop__quote > *, .desktop__img > *, .desktop__cta > * {
+        margin: 0; /* Removes default margins from elements like <h2> and <p> */
+        padding: 0; /* Adjust as necessary */
+    }
+
+    /* Reapply any desired padding or margin specifically rather than globally */
+    .desktop__quote, .desktop__cta {
+        padding: 0 5%;
+    }
+
+    .desktop__cta > button {
+        margin: 10px auto; /* Example of reapplying margin specifically */
+        width: 70%;
     }
 }
