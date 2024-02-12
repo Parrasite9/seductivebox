@@ -27,3 +27,31 @@
     }
 }
 
+@media (min-width: 1000px) {
+    .navlinks {
+        display: flex;
+        flex: 3;
+        justify-content: space-around;
+        padding-left: 15%;
+    }
+
+    .logo__container {
+        flex: 1;
+        max-width: 25%;
+    }
+
+    .logo__container > img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navlinks > a {
+        text-decoration: none;
+        color: #a100ff;
+    }
+
+    .navlinks > a:hover {
+        color: #ff00c3;
+    }
+    
+}

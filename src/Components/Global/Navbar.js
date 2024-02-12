@@ -26,9 +26,14 @@ function Navbar() {
             </div>
 
         ) : (
-            <>
-            TEST
-            </>
+            <div className="navlinks">
+                <a href="">Home</a>
+                <a href="">Products</a>
+                <a href="">FAQ</a>
+                <a href="">How To</a>
+                <a href="">Contact Us</a>
+                <a href="">Login</a>
+            </div>
         )
 
         }
