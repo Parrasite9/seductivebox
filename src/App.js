@@ -6,6 +6,7 @@ import FAQ from './Components/Home/FAQ';
 import Featured from './Components/Home/Featured';
 import Hero from './Components/Home/Hero';
 import Step from './Components/Home/Step';
+import Fetch from './Express/Fetch';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Box />
       <FAQ />
       <Footer />
+      <Fetch />
     </div>
   );
 }
