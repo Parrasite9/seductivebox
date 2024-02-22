@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../../CSS/Home/Hero.css'
 
 // COMPONENTS 
@@ -16,7 +17,7 @@ function Hero() {
             <div className="hero__text">
                 <h1>A STYLE FOR EVERY OCCASION</h1>
                 <h4>Lingerie, Sleepwear, and more... Curated just for <strong>YOU!</strong></h4>
-                <button>Take Style Quiz</button>
+                <Link to='style-quiz'><button>Take Style Quiz</button></Link>
                 <div className="sizing__container">
                     
                     {/* NAME AND SIZE  */}

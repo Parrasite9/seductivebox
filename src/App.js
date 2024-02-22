@@ -1,28 +1,25 @@
-import Footer from './Components/Global/Footer';
-import Navbar from './Components/Global/Navbar';
-import Anchor from './Components/Home/Anchor';
-import Box from './Components/Home/Box';
-import FAQ from './Components/Home/FAQ';
-import Featured from './Components/Home/Featured';
-import Hero from './Components/Home/Hero';
-import PricingTable from './Components/Home/PricingTable';
-import Step from './Components/Home/Step';
 import Fetch from './Express/Fetch';
+
+// REACT ROUTER DOM 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+// COMPONENTS 
+import Home from './Components/Home/Home';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <PricingTable />
-      <Step />
-      <Featured />
-      <Anchor />
-      <Box />
-      <FAQ />
-      <Footer />
-      <Fetch />
+      <BrowserRouter>
+        <Routes>
+
+          <Route path='/' element={<Home />} />
+          <Route path='/style-quiz' element={<Dashboard />} />
+        
+        
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
