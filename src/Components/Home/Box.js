@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../CSS/Home/Box.css'
 
 function Box() {
@@ -40,7 +41,7 @@ function Box() {
 
       </div>
 
-      <button>Take Style Quiz</button>
+      <Link to='style-quiz'><button>Take Style Quiz</button></Link>
     </div>
   )
 }
