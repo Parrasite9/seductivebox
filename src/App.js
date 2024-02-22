@@ -5,6 +5,7 @@ import Box from './Components/Home/Box';
 import FAQ from './Components/Home/FAQ';
 import Featured from './Components/Home/Featured';
 import Hero from './Components/Home/Hero';
+import PricingTable from './Components/Home/PricingTable';
 import Step from './Components/Home/Step';
 import Fetch from './Express/Fetch';
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <PricingTable />
       <Step />
       <Featured />
       <Anchor />
