@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../CSS/Home/Anchor.css'
 
 import WindowWidth from '../CustomHook/WindowWidth'
@@ -18,7 +19,7 @@ function Anchor() {
           <div className="mobile__anchor">
             <div className="cta">
               <h2>Discover Something Sexy In You!</h2>
-              <button>Take Style Quiz</button>
+              <Link to='style-quiz'><button>Take Style Quiz</button></Link>
             </div>
 
             <div className="anchor__img">
@@ -64,7 +65,7 @@ function Anchor() {
 
             <div className="tablet__cta">
               <h2>Discover Something Sexy In You!</h2>
-              <button>Take Style Quiz</button>
+              <Link to='style-quiz'><button>Take Style Quiz</button></Link>
             </div>
 
             <div className="quote__container">
@@ -104,7 +105,7 @@ function Anchor() {
 
             <div className="desktop__cta">
               <h2>Discover Something Sexy In You!</h2>
-              <button>Take Style Quiz</button>
+              <Link to='style-quiz'><button>Take Style Quiz</button></Link>
             </div>
 
             {/* IMAGE  */}

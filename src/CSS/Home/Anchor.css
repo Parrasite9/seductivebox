@@ -22,7 +22,8 @@
   .quote {
     padding: 5% 0;
   }
-
+  
+  .cta > h2,
   .quote > h2,
   .tablet__cta {
     padding: 0 5%;
@@ -33,22 +34,23 @@
     padding: 15% 0;
   }
 
-  .cta > button,
-  .tablet__cta > button,
-  .desktop__cta > button {
+  .cta > a > button,
+  .tablet__cta > a > button,
+  .desktop__cta > a > button {
     color: #ff00c3;
     background-color: #fff;
     border: 2px solid #a100ff;
-    width: 50%;
-    height: 25%;
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Fixed height */
     border-radius: 15px;
-    /* margin-bottom: 5%; */
     cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
   }
-
-  .cta > button:hover,
-  .tablet__cta > button:hover,
-  .desktop__cta > button:hover {
+  
+  .cta > a > button:hover,
+  .tablet__cta > a > button:hover,
+  .desktop__cta > a > button:hover {
     background-color: #a100ff;
     color: white;
   }
@@ -146,6 +148,7 @@
 
     .desktop__cta > h2 {
         text-align: center;
+        margin-bottom: 5%;
     }
 
     .desktop__cta > button {
