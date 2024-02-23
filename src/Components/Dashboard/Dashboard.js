@@ -7,6 +7,9 @@ function Dashboard() {
   return (
     <div className='Dashboard'>
       <div className="dashboard__container">
+        <div className="dashboard__header">
+            <img src="/images/favicon/favicon.png" alt="logo" />
+        </div>
         <Questionnaire />
       </div>
     </div>

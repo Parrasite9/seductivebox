@@ -1,5 +1,43 @@
 .dashboard__container {
-    border: 1px solid red;
-    /* padding: 25%; */
+    border: 2px solid #ff00c3;
+    border-radius: 5px;
     margin: 25%;
+}
+
+.dashboard__header {
+    background-color: #ff00c3;
+    /* height: 20%; */
+    padding: 5%;
+}
+
+.dashboard__header > img {
+    background-color: #f2f2f2;
+    width: 20%;
+    display: flex;
+    border-radius: 5px;
+}
+
+.questions__container {
+    margin: 5% ;
+}
+
+@media (min-width: 625px) {
+    .dashboard__container {
+        margin: 20%;
+    }
+
+    .dashboard__header > img {
+        width: 15%;
+    }
+
+    .dashboard__header {
+        padding: 2.5%;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .dashboard__header > img {
+        width: 12%;
+    }
 }
