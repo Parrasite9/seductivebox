@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Question from './Question';
+import { useNavigate } from 'react-router-dom'
 
   const questions = [
     {
@@ -38,6 +39,7 @@ import Question from './Question';
 
 
 const Questionnaire = () => {
+  const navigate = useNavigate();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState({});
 
@@ -49,7 +51,7 @@ const Questionnaire = () => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
-            // All questions answered, proceed to checkout or other actions
+          navigate('/checkout')
         }
     };
 
