@@ -1,0 +1,36 @@
+.Question {
+    text-align: center;
+}
+
+.question__title {
+    margin-bottom: 20px;
+}
+
+.questions__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.questions__container button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.questions__container img {
+    max-width: 100px;
+    height: auto;
+}
+
+@media (min-width: 700px) {
+    .questions__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
