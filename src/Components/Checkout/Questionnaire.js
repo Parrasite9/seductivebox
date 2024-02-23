@@ -39,11 +39,12 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Questionnaire = ({onComplete}) => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState({});
 
     const handleSelectOption = (option) => {
+      console.log("Selected options:", selectedOptions); // Log the selected options
         const question = questions[currentQuestionIndex];
         setSelectedOptions({ ...selectedOptions, [question.id]: option });
 
@@ -52,9 +53,30 @@ const Questionnaire = ({onComplete}) => {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
           // navigate('/checkout')
-          onComplete()
+          // onComplete()
+          handleSubmitQuestionnaire()
         }
     };
+
+    const handleSubmitQuestionnaire = () => {
+      fetch('/questionnaire', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(selectedOptions),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Store the subscription ID for later use in the checkout process
+          localStorage.setItem('subscriptionId', data.id);
+          onComplete();
+        })
+        .catch((error) => {
+          console.error('Error submitting questionnaire:', error);
+        });
+    };
+    
 
     return (
         <div>

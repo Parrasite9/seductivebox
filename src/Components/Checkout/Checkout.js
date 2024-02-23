@@ -28,8 +28,26 @@ function Checkout({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    const subscriptionId = localStorage.getItem('subscriptionId');
+    const checkoutData = { ...formData, subscriptionId };
+    console.log("Checkout data:", checkoutData); // Log the checkout data
+    fetch('/checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(checkoutData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Checkout successful:', data);
+        // Redirect to a success page or perform other actions as needed
+      })
+      .catch((error) => {
+        console.error('Error during checkout:', error);
+      });
   };
+  
 
   return (
     <div className="Checkout">
