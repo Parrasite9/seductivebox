@@ -38,7 +38,7 @@ import { useNavigate } from 'react-router-dom'
 ];
 
 
-const Questionnaire = () => {
+const Questionnaire = ({onComplete}) => {
   const navigate = useNavigate();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState({});
@@ -51,7 +51,8 @@ const Questionnaire = () => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
-          navigate('/checkout')
+          // navigate('/checkout')
+          onComplete()
         }
     };
 

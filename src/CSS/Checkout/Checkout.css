@@ -1,0 +1,53 @@
+.Checkout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .Checkout label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .Checkout input[type="text"],
+  .Checkout input[type="email"],
+  .Checkout input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 50%;
+  }
+  
+  .Checkout input[type="text"]:focus,
+  .Checkout input[type="email"]:focus,
+  .Checkout input[type="password"]:focus {
+    border-color: #007bff;
+  }
+  
+  .Checkout button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff00c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Checkout button:hover {
+    background-color: #a100c3;
+  }
+  
