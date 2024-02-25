@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../../CSS/Login/Login.css'; 
+
 
 function Login() {
     const [formData, setFormData] = useState({ email: '', password: '' });
@@ -38,8 +40,11 @@ function Login() {
     
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="login__dashboard">
+            <div className="login__header">
+                <img src="images/favicon/favicon.png" alt="logo" />
+            </div>
+            <form onSubmit={handleSubmit} className="login__form">
                 <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
                 <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
                 <button type="submit">Login</button>
