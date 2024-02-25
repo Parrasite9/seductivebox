@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import '../../CSS/Checkout/Checkout.css'
+import { useNavigate } from 'react-router-dom';
+
 
 function Checkout({ onSubmit }) {
+  const navigate = useNavigate()
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -26,27 +30,46 @@ function Checkout({ onSubmit }) {
     setStep(2);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const subscriptionId = localStorage.getItem('subscriptionId');
-    const checkoutData = { ...formData, subscriptionId };
-    console.log("Checkout data:", checkoutData); // Log the checkout data
-    fetch('/checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(checkoutData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Checkout successful:', data);
-        // Redirect to a success page or perform other actions as needed
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const subscriptionId = localStorage.getItem('subscriptionId');
+  const checkoutData = { ...formData, subscriptionId };
+  fetch('/checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(checkoutData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Checkout successful:', data);
+      // Login and redirect to home page
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: formData.email, password: formData.password }),
       })
-      .catch((error) => {
-        console.error('Error during checkout:', error);
-      });
-  };
+        .then((response) => response.json())
+        .then((loginData) => {
+          if (loginData.message === 'Login successful') {
+            // Assuming you have a way to set the logged-in user in your app's state
+            // setUser(loginData.user);
+            navigate('/');
+          } else {
+            console.error('Login failed:', loginData.message);
+          }
+        })
+        .catch((loginError) => {
+          console.error('Error during login:', loginError);
+        });
+    })
+    .catch((error) => {
+      console.error('Error during checkout:', error);
+    });
+};
   
 
   return (
