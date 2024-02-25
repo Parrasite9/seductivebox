@@ -51,7 +51,7 @@ function Navbar() {
                 <a href="">Contact Us</a>
                 {isLoggedIn ? (
                     <>
-                        <Link to="/dashboard">Account</Link>
+                        <Link to="#">Account</Link>
                         <Link to="/" onClick={handleLogout}>Logout</Link>                    </>
                     ) : (
                         <Link to="/login">Login</Link>

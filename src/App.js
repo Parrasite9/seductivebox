@@ -20,6 +20,7 @@ function App() {
           <Route path='/style-quiz' element={<Dashboard />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/login' element={<Login />} />
+          {/* <Route path='/account' element={<Dashboard />} /> */}
         
         </Routes>
       </BrowserRouter>
