@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.footer__logo > img {
+.footer__logo > a > img {
     width: 100%;
 }
 

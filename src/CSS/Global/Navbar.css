@@ -5,8 +5,8 @@
     padding: 1% 5%;
 }
 
-.logo__container > img {
-    width: 50%;
+.logo__container > a > img {
+    width: 65%;
 }
 
 .burger__menu {

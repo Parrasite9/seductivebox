@@ -39,7 +39,9 @@ function Navbar() {
     return (
         <div className='Navbar'>
             <div className="logo__container">
+            <Link to='/'>
                 <img src="images/logo/LogoHD.png" alt="logo" />
+            </Link>
             </div>
 
             {isMobile ? (
@@ -70,7 +72,7 @@ function Navbar() {
                 </>
             ) : (
                 <div className="navlinks">
-                    <a href="">Home</a>
+                    <Link to='/'>Home</Link>
                     <a href="">Products</a>
                     <a href="">FAQ</a>
                     <a href="">How To</a>

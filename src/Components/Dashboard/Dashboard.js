@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../../CSS/Dashboard/Dashboard.css'
 import Checkout from '../Checkout/Checkout'
 import Questionnaire from '../Checkout/Questionnaire'
+import Footer from '../Global/Footer';
+import Navbar from '../Global/Navbar';
 
 function Dashboard() {
     const [userData, setUserData] = useState(null);
@@ -25,6 +27,7 @@ function Dashboard() {
 
   return (
     <div className='Dashboard'>
+      <Navbar />
       <div className="dashboard__container">
         <div className="dashboard__header">
             <img src="/images/favicon/favicon.png" alt="logo" />
@@ -46,6 +49,7 @@ function Dashboard() {
           </div>
         )} */}
       </div>
+      <Footer ></Footer>
     </div>
   )
 }

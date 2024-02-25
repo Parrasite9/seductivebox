@@ -1,5 +1,6 @@
 import '../../CSS/Global/Footer.css'
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -9,7 +10,9 @@ function Footer() {
     <div className='Footer'>
       <div className="footer__container">
         <div className="footer__logo">
-          <img src="images/logo/LogoHD.png" alt="logo" />
+          <Link to='/'>
+            <img src="images/logo/LogoHD.png" alt="logo" />
+          </Link>
         </div>
 
         <div className="visitUs">
