@@ -6,6 +6,8 @@ import WindowWidth from '../CustomHook/WindowWidth';
 
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -14,6 +16,7 @@ function Navbar() {
     const isMobile = width < 1000
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     useEffect(() => {
         // Check if the user is logged in (you can adjust this based on your authentication logic)
@@ -29,40 +32,61 @@ function Navbar() {
         // Additional logout actions if needed
     };
 
-  return (
-    <div className='Navbar'>
-        <div className="logo__container">
-            <img src="images/logo/LogoHD.png" alt="logo" />
-        </div>
+    const toggleMobileMenu = () => {
+        setShowMobileMenu(!showMobileMenu);
+    };
 
-        {isMobile ? (
-            <div className="mobile__container">
-                <div className="burger__menu">
-                    <MenuIcon />
-                </div>
+    return (
+        <div className='Navbar'>
+            <div className="logo__container">
+                <img src="images/logo/LogoHD.png" alt="logo" />
             </div>
 
-        ) : (
-            <div className="navlinks">
-                <a href="">Home</a>
-                <a href="">Products</a>
-                <a href="">FAQ</a>
-                <a href="">How To</a>
-                <a href="">Contact Us</a>
-                {isLoggedIn ? (
-                    <>
-                        <Link to="#">Account</Link>
-                        <Link to="/" onClick={handleLogout}>Logout</Link>                    </>
+            {isMobile ? (
+                <>
+                    <div className="burger__menu" onClick={toggleMobileMenu}>
+                        <MenuIcon />                    
+                    </div>
+                    {showMobileMenu && (
+                        <div className="mobile__navlinks">
+                            <div className="close__icon" onClick={toggleMobileMenu}>
+                                <CloseIcon />
+                            </div>
+                            <a href="#" onClick={toggleMobileMenu}>Home</a>
+                            <a href="#" onClick={toggleMobileMenu}>Products</a>
+                            <a href="#" onClick={toggleMobileMenu}>FAQ</a>
+                            <a href="#" onClick={toggleMobileMenu}>How To</a>
+                            <a href="#" onClick={toggleMobileMenu}>Contact Us</a>
+                            {isLoggedIn ? (
+                                <>
+                                    <Link to="#" onClick={toggleMobileMenu}>Account</Link>
+                                    <Link to="/" onClick={handleLogout}>Logout</Link>
+                                </>
+                            ) : (
+                                <Link to="/login" onClick={toggleMobileMenu}>Login</Link>
+                            )}
+                        </div>
+                    )}
+                </>
+            ) : (
+                <div className="navlinks">
+                    <a href="">Home</a>
+                    <a href="">Products</a>
+                    <a href="">FAQ</a>
+                    <a href="">How To</a>
+                    <a href="">Contact Us</a>
+                    {isLoggedIn ? (
+                        <>
+                            <Link to="#">Account</Link>
+                            <Link to="/" onClick={handleLogout}>Logout</Link>
+                        </>
                     ) : (
                         <Link to="/login">Login</Link>
-                )}
-            </div>
-        )
-
-        }
-      
-    </div>
-  )
+                    )}
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default Navbar

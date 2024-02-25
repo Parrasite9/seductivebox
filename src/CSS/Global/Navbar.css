@@ -2,16 +2,55 @@
     display: flex;    
     justify-content: space-between;
     align-items: center;
-    padding: 2% 5%;
+    padding: 1% 5%;
 }
 
 .logo__container > img {
     width: 50%;
 }
 
+.burger__menu {
+    color: #ff00c3;
+    font-size: 40px;
+}
+
 .mobile__container > div > svg {
     color: #a100ff;
 }
+
+/* Add these styles inside your Navbar.css file */
+
+.mobile__navlinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Adjust the background color as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure the menu is above other content */
+    background-image: linear-gradient(36deg, #a100ff 0%, #ff00c3 62%);
+
+}
+
+.mobile__navlinks a {
+    margin: 10px 0;
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    text-decoration: none;
+    color: #fff;
+}
+
+.close__icon {
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ff00c3;
+}
+
 
 @media (min-width: 750px) {
     .logo__container > img {
